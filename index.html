@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <style>
+    </style>
+  </head>
+  <body>
+    <pre id="msg">(nothing received yet...)</pre>
+  </body>
+  <script>
+    function receiveMessage(event) {
+      var element = document.getElementById("msg");
+      element.innerText = "received from [" + event.origin + "]:\n" + event.data;
+    }
+    window.addEventListener("message", receiveMessage, false);
+  </script>
+</html>
